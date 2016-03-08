@@ -103,7 +103,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     Trebuchet \
-    Wallpapers
+    Wallpapers \
+    LiveLockScreenService
 
 # Exchange support
 PRODUCT_PACKAGES += \
