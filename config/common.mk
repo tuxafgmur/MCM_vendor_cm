@@ -110,7 +110,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     Trebuchet \
     Wallpapers \
-    LiveLockScreenService
+    LiveLockScreenService \
+    WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
