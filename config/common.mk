@@ -144,16 +144,14 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Trebuchet \
     AudioFX \
-    CMWallpapers \
     CMFileManager \
+    CMSettingsProvider \
+    Calculator \
     Eleven \
     LockClock \
-    CyanogenSetupWizard \
-    CMSettingsProvider \
-    ExactCalculator
+    Trebuchet \
+    Wallpapers
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -164,7 +162,6 @@ PRODUCT_PACKAGES += \
     libsepol \
     mke2fs \
     tune2fs \
-    nano \
     htop \
     mkfs.ntfs \
     fsck.ntfs \
