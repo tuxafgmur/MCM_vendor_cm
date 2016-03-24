@@ -12,6 +12,5 @@ PRODUCT_PACKAGES += \
     Stk \
     CellBroadcastReceiver
 
-# Default ringtone
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Orion.ogg
+# Inherit default sounds
+$(call inherit-product, vendor/cm/config/sound_config.mk)
