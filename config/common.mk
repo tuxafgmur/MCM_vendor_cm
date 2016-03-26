@@ -138,7 +138,8 @@ PRODUCT_PACKAGES += \
     oprofiled \
     sqlite3 \
     strace \
-    pigz
+    pigz \
+    busybox
 
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
