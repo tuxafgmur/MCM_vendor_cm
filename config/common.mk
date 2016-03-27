@@ -27,31 +27,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+PRODUCT_PROPERTY_OVERRIDES += ro.build.selinux=1
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
-# Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
-endif
-
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-# Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
     vendor/cm/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
 # Backup Tool
-ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/cm/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/cm/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
-    vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist
-endif
+    vendor/cm/prebuilt/common/bin/50-rom.sh:system/addon.d/50-rom.sh \
+    vendor/cm/prebuilt/common/bin/54-initd.sh:system/addon.d/54-inid.sh \
+    vendor/cm/prebuilt/common/bin/58-lcdcpi.sh:system/addon.d/58-lcdcpi.sh
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
@@ -59,18 +49,13 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit \
+    vendor/cm/prebuilt/common/etc/init.d/80-Clean:system/etc/init.d/80-Clean \
+    vendor/cm/prebuilt/common/etc/init.d/85-Fstrim:system/etc/init.d/85-Fstrim
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
-# userinit support
+# mkshrc
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
-endif
-
-# CM-specific init file
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+    vendor/cm/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
