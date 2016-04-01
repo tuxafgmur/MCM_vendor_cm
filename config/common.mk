@@ -57,6 +57,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
+# xbin
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/xbin/sysro:system/xbin/sysro \
+    vendor/cm/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/cm/prebuilt/common/xbin/zipalign:system/xbin/zipalign
+
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
