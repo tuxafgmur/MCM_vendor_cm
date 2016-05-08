@@ -8,6 +8,7 @@
 list_files() {
 cat <<EOF
 etc/hosts
+etc/sysctl.conf
 media/bootanimation.zip
 EOF
 }

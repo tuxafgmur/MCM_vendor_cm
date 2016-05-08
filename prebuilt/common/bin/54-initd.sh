@@ -17,6 +17,8 @@ initd_files() {
 	for FILE in *; do
 	    [ "$FILE" = "*" ] && continue
 		case $FILE in
+		    *-Config)
+			;;
 		    *-Clean)
 			;;
 		    *-Fstrim)
