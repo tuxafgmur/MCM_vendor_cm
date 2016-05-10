@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     Wallpapers \
     LiveLockScreenService \
-    WeatherProvider
+    WeatherProvider \
+    DataUsageProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
