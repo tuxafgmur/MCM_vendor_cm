@@ -106,13 +106,13 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     CMSettingsProvider \
     Calculator \
+    DataUsageProvider \
     Eleven \
+    LiveLockScreenService \
     LockClock \
     Trebuchet \
     Wallpapers \
-    LiveLockScreenService \
-    WeatherProvider \
-    DataUsageProvider
+    WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -120,20 +120,20 @@ PRODUCT_PACKAGES += \
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
-    libsepol \
-    mke2fs \
-    tune2fs \
-    htop \
-    mkfs.ntfs \
+    busybox \
     fsck.ntfs \
-    mount.ntfs \
     gdbserver \
+    htop \
+    libsepol \
     micro_bench \
+    mke2fs \
+    mkfs.ntfs \
+    mount.ntfs \
     oprofiled \
+    pigz \
     sqlite3 \
     strace \
-    pigz \
-    busybox
+    tune2fs
 
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
