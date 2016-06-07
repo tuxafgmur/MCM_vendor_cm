@@ -111,6 +111,7 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     LockClock \
     Trebuchet \
+    WallpaperPicker \
     Wallpapers \
     WeatherProvider
 
