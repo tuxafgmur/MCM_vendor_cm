@@ -1,5 +1,3 @@
 # Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+$(call inherit-product, vendor/cm/config/common_mini.mk
 
-# Inherit default sounds
-$(call inherit-product, vendor/cm/config/sound_config.mk)
