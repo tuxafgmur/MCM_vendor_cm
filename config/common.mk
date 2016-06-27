@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     CMSettingsProvider \
     Calculator \
+    CyanogenSetupWizard \
     DataUsageProvider \
     Eleven \
     LiveLockScreenService \
