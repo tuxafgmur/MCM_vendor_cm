@@ -43,6 +43,10 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/54-initd.sh:system/addon.d/54-inid.sh \
     vendor/cm/prebuilt/common/bin/58-lcdcpi.sh:system/addon.d/58-lcdcpi.sh
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/cm/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
